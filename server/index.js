@@ -12,10 +12,8 @@ const db = mysql.createConnection({
     user: 'root',
     host: 'localhost',
     password: 'password',
-    database: 'employees',
+    database: 'employeesys',
 });
-
-
 
 app.post('/create', (req, res) => {
  const name = req.body.name;
@@ -23,11 +21,20 @@ app.post('/create', (req, res) => {
  const age = req.body.age;
  const position = req.body.position;
  const ctc = req.body.ctc;
- console.log(req.body);
+ //console.log(req.body);
+
+// connect to db and log the status
+db.connect((err) => {
+    if (err) {
+        console.error('Error connecting to MySQL database:', err);
+    } else {
+        console.log('Connected to MySQL database');
+    }
+});
 
  //db queries
  db.query(
-    'INSERT INTO employees (name, email, age, position, ctc) VALUES (?, ?,?,?,?)',
+    'INSERT INTO employee (name, email, age, position, ctc) VALUES (?,?,?,?,?)',
     [name, email, age, position, ctc], 
     (err, result) => {                                  //what to do when fxn is executed
         if(err){
