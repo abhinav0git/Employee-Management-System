@@ -27,5 +27,49 @@
 
 .infoo button:hover {
   cursor: pointer;
+  background-color: #000000;
+  color: #ffffff;
 }
 
+.emplBtn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.emplBtn button {
+  width: 160px;
+  height: 30px;
+}
+
+.emplBtn button:hover {
+  width: 165px;
+  height: 35px;
+  cursor: pointer;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.empNameBox {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+}
+.empName {
+  border: #000000 1px solid;
+  font-family: 'Courier New', Courier, monospace;
+  margin: 2%;
+  padding: 10px;
+  /* padding: auto; */
+}
+
+.listBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}

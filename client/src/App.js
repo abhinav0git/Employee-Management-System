@@ -5,17 +5,15 @@ import Axios from 'axios';
 
 
 function App() {
-  // react state
+  // react state (for form fields)
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [age, setAge] = useState(0);
   const [position, setPosition] = useState("");
   const [ctc, setCtc] = useState(0);
   
-  // console.log(name);
-  // const displayInfo = () => {
-  //   console.log(name + email + age + position + ctc);
-  // }
+  //react state for employee list
+  const [employeeList, setEmployeeList] = useState([]);
 
   const addEmployee = () => {
   Axios.post('http://localhost:3001/create/', { 
@@ -24,9 +22,19 @@ function App() {
     age: age, 
     position: position, 
     ctc: ctc}).then(() => {
-      console.log('Success');
+      // console.log('Success');
+      
+      //array destructuting 
+      setEmployeeList([...employeeList, { name: name, email: email, age: age, position: position, ctc: ctc},]); 
     });
   };
+
+  const getEmployees = () => {
+    Axios.get('http://localhost:3001/employees').then((response) => {
+      // console.log(response);
+      setEmployeeList(response.data);
+    });
+  }
 
   return (
     <div className="App">
@@ -57,8 +65,22 @@ function App() {
         }} />
 
         <button onClick={addEmployee}>Add Employee</button>
-
+        ------------------------------------------------------------------------------------------------------
       </div>
+
+      <div className="emplBtn">
+        <button onClick={getEmployees}>Show Employees</button>
+      </div>
+      <div className='empNameBox'>
+      {employeeList.map((val, key) => {
+        return (
+          <div className='empName'> 
+            <span className='listBox'><br></br>{val.name}<br></br>{val.email}<br></br>{val.age}<br></br>{val.position}<br></br>{val.ctc}
+            </span>
+          </div>
+        );
+        })}
+        </div>
     </div>
   );
 }

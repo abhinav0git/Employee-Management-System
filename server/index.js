@@ -46,6 +46,17 @@ db.connect((err) => {
     });
 });
 
+app.get('/employees', (req, res) => {
+    db.query("SELECT * FROM employee", (err, result) => {
+        if(err){
+            console.log('Error executing SQL query (while getting employee list)', err);
+        }
+        else {
+            res.send(result);
+        }
+    })
+})
+
 app.listen(3001, () => {
     console.log('Server is running on port 3001');
 });
