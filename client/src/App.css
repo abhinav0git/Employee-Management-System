@@ -1,0 +1,31 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.infoo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.infoo input {
+  margin-bottom: 5%;
+  width: 300px;
+  height: 20px;
+  font-size: 18px;
+  padding-left: 10px;
+}
+
+.infoo button {
+  width: 160px;
+  height: 30px;
+}
+
+.infoo button:hover {
+  cursor: pointer;
+}
+
