@@ -43,5 +43,9 @@
 
    6) Run the server by running `npm start/yarn start` command. <br>
 
-- <h2>Demo</h2>
-  https://www.loom.com/share/17bae782b09844c197df971b717e5303?sid=abf2f93d-e6e0-4969-9972-2fa5ee6767bf
+- ### Demo Video
+  https://www.loom.com/share/17bae782b09844c197df971b717e5303?sid=b55aa837-852c-449c-8d78-633df4d1d02d
+
+- MySQL DB Snippets
+  ![image](https://github.com/abhinav0git/simple-crud/assets/103176039/e2d89481-42c4-437e-82e4-071a773de0e3)
+
