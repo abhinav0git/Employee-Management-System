@@ -1,8 +1,7 @@
-<<<<<<< HEAD
 # CRUD App using ReactJS, NodeJS, ExpressJS and MySQL
 
 - <h2>Prerequisites</h2>
-  Make sure you have the following installed: <br><br>
+  Make sure you have the following installed: <br>
 
   - Node.js (v14.0.0 or higher)
 
@@ -22,13 +21,13 @@
 
  - <h2>Implementation</h2>
 
-   1) If you want to run this application on your machine, you need to have ReactJS, NodeJS and MySQL installed on your PC. <br><br>
+   1) If you want to run this application on your machine, you need to have ReactJS, NodeJS and MySQL installed on your PC. <br>
 
-   2) After Installing MySQL client and NodeJS, you need to create a database named "db_name" and create a table named "db_name_table" on it. <br><br>
+   2) After Installing MySQL client and NodeJS, you need to create a database named "db_name" and create a table named "db_name_table" on it. <br>
 
-   3) Then insert some required data like "name", "email", "position" etc (things you want to store in the db via clientSide) in the table. <br><br>
+   3) Then insert some required data like "name", "email", "position" etc (things you want to store in the db via clientSide) in the table. <br>
 
-   4) Make sure to change the "db_name" and "db_name_table" in the "index.js" file. <br><br>
+   4) Make sure to change the "db_name" and "db_name_table" in the "index.js" file. <br>
 
 
    ```node
@@ -40,15 +39,9 @@
     }); 
     ```
 
-   <br>
+   5) Install the required dependencies by running `npm install` command. <br>
 
-   5) Install the required dependencies by running "npm install" command. <br><br>
-
-   6) Run the server by running "npm start/yarn start" command. <br><br>
+   6) Run the server by running `npm start/yarn start` command. <br>
 
 - <h2>Demo</h2>
-![CRUD App Demo](https://www.loom.com/share/17bae782b09844c197df971b717e5303)
-=======
-Small Demo
-https://www.loom.com/share/17bae782b09844c197df971b717e5303
->>>>>>> 521645a8fed2a99a3dff4b2f7303b45a28cf5f6c
+  https://www.loom.com/share/17bae782b09844c197df971b717e5303?sid=abf2f93d-e6e0-4969-9972-2fa5ee6767bf
