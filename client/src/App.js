@@ -23,7 +23,7 @@ function App() {
     position: position, 
     ctc: ctc}).then(() => {
       // console.log('Success');
-      
+
       //array destructuting 
       setEmployeeList([...employeeList, { name: name, email: email, age: age, position: position, ctc: ctc},]); 
     });
@@ -65,7 +65,7 @@ function App() {
         }} />
 
         <button onClick={addEmployee}>Add Employee</button>
-        ------------------------------------------------------------------------------------------------------
+        <hr></hr>
       </div>
 
       <div className="emplBtn">
@@ -75,7 +75,12 @@ function App() {
       {employeeList.map((val, key) => {
         return (
           <div className='empName'> 
-            <span className='listBox'><br></br>{val.name}<br></br>{val.email}<br></br>{val.age}<br></br>{val.position}<br></br>{val.ctc}
+            <span className='listBox'>
+              <br></br>Name: {val.name}
+              <br></br>EMail: {val.email}
+              <br></br>Age: {val.age}
+              <br></br>Position: {val.position}
+              <br></br>CTC: {val.ctc}
             </span>
           </div>
         );
