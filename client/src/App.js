@@ -2,6 +2,7 @@ import './App.css';
 // import state stuff
 import React, { useState, useEffect } from 'react';
 import Axios from 'axios';
+import axios from 'axios';
 
 
 function App() {
@@ -49,6 +50,14 @@ function App() {
       }
     );
   };
+
+  const deleteEmployee = (id) => {
+    Axios.delete('http://localhost:3001/delete/${id}').then((responce) => {
+      setEmployeeList(employeeList.filter(val) => {
+        return val.id != id;
+      })
+    })
+  }
 
   useEffect(() => {
     // hide notification after 2 sec
@@ -118,7 +127,8 @@ function App() {
                     setNewCtc(event.target.value);
                     }}
                   />
-                  <button onClick={() => {updateCtc(val.id)}}>update</button>
+                  <button onClick={() => {updateCtc(val.id)}}>Update</button>
+                  <button onClick={() => {deleteEmployee(val.id)}}>Delete</button>
                 </div> 
             </span>
           </div>
