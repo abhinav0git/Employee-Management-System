@@ -57,6 +57,20 @@ app.get('/employees', (req, res) => {
     })
 })
 
+app.put('/update', (req, res) => {
+    const id = req.body.id;
+    const ctc = req.body.ctc;
+    db.query("UPDATE employee SET ctc = ? WHERE id = ?", [ctc, id], (err, result) => {
+        if(err){
+            console.log(err);
+        }
+        else {
+            res.send(result);
+        }
+    });
+});
+
+//app.delete();
 app.listen(3001, () => {
     console.log('Server is running on port 3001');
 });
