@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # CRUD App using ReactJS, NodeJS, ExpressJS and MySQL
 
 - <h2>Prerequisites</h2>
@@ -47,3 +48,7 @@
 
 - <h2>Demo</h2>
 ![CRUD App Demo](https://www.loom.com/share/17bae782b09844c197df971b717e5303)
+=======
+Small Demo
+https://www.loom.com/share/17bae782b09844c197df971b717e5303
+>>>>>>> 521645a8fed2a99a3dff4b2f7303b45a28cf5f6c
