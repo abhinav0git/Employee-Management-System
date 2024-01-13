@@ -52,12 +52,10 @@ function App() {
   };
 
   const deleteEmployee = (id) => {
-    Axios.delete('http://localhost:3001/delete/${id}').then((responce) => {
-      setEmployeeList(employeeList.filter(val) => {
-        return val.id != id;
-      })
-    })
-  }
+    Axios.delete(`http://localhost:3001/delete/${id}`).then((response) => {
+      setEmployeeList(employeeList.filter((val) => val.id !== id));
+    });
+  };  
 
   useEffect(() => {
     // hide notification after 2 sec
