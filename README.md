@@ -1,4 +1,4 @@
-# CRUD App using ReactJS, NodeJS, ExpressJS and MySQL
+# A CRUD based Employee-Management-System using ReactJS, NodeJS, ExpressJS and MySQL
 
 - <h2>Prerequisites</h2>
   Make sure you have the following installed: <br>
